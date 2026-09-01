@@ -23,7 +23,9 @@ The host currently has the following virtualisation platforms installed:
 
 Windows reports that a hypervisor is present.
 
-The initial WMI processor check reported firmware virtualisation as disabled. This requires additional verification before the evidence VM is provisioned.
+Task Manager reports hardware virtualisation as enabled, and `systeminfo` confirms that a hypervisor has been detected.
+
+An earlier WMI processor query returned `VirtualizationFirmwareEnabled: False`; however, this conflicts with the host's active hypervisor state and Task Manager result. Virtualisation is therefore considered available for lab planning, subject to successful VMware guest startup during VM provisioning.
 
 ## Lab Architecture Decision
 
@@ -69,4 +71,6 @@ Host environment assessed.
 
 Lab architecture selected provisionally.
 
-Storage remediation and virtualisation verification are required before VM provisioning.
+Virtualisation has been verified at the host level.
+
+Storage remediation remains the primary prerequisite before VM provisioning.

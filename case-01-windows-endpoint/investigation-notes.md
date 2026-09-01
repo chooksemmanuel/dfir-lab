@@ -25,6 +25,8 @@ Case 01 - Windows Endpoint Forensics
 - Selected VMware Workstation as the planned hypervisor.
 - Identified insufficient available storage as a blocker to VM provisioning.
 - Deferred VM creation until sufficient storage capacity is available.
+- Verified hardware virtualisation as enabled through Windows Task Manager.
+- Confirmed that Windows detects an active hypervisor.
 
 #### Evidence Examined
 
@@ -40,7 +42,7 @@ No forensic conclusions can currently be made because forensic evidence has not 
 
 #### Next Step
 
-Verify the host virtualisation configuration and resolve the available-storage constraint before provisioning the Windows evidence VM.
+Resolve the available-storage constraint before provisioning the Windows evidence VM.
 
-The controlled investigation scenario will then be designed before evidence generation begins.
+After sufficient storage is available, verify VMware guest startup and design the controlled investigation scenario before evidence generation begins.
 

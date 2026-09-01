@@ -1,0 +1,56 @@
+# =========================================================
+# DFIR LAB
+# Files that should not be committed to the public repo
+# =========================================================
+
+# Environment variables / secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Raw forensic disk evidence
+evidence/
+*.E01
+*.E02
+*.dd
+*.img
+
+# Memory images
+*.raw
+*.mem
+*.vmem
+*.dmp
+
+# Packet captures
+*.pcap
+*.pcapng
+
+# Virtual machine disks
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+
+# Virtual machine snapshots / state
+*.vmss
+*.vmsn
+*.sav
+
+# Forensic application working data
+autopsy-case-data/
+
+# Python environments/cache
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor configuration
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

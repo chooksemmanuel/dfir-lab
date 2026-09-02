@@ -46,3 +46,37 @@ Resolve the available-storage constraint before provisioning the Windows evidenc
 
 After sufficient storage is available, verify VMware guest startup and design the controlled investigation scenario before evidence generation begins.
 
+
+---
+
+### Day 2 - Scenario Design and Ground-Truth Separation
+
+#### Actions Completed
+
+- Confirmed that approximately 140 GB of host storage is now available.
+- Updated the lab environment documentation.
+- Designed the controlled Case 01 user-activity scenario.
+- Created a private ground-truth scenario plan.
+- Added the private ground-truth directory to `.gitignore`.
+- Created a public scenario overview that excludes the answer to the investigation.
+- Created an evidence-expectation matrix linking planned activity to potential forensic artefacts.
+- Calculated a SHA-256 hash of the private scenario plan.
+- Published the hash as a ground-truth integrity commitment.
+
+#### Evidence Examined
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+The scenario has been designed, but no forensic evidence has yet been generated or analysed.
+
+Expected artefacts documented during this phase are hypotheses only and must not be treated as findings.
+
+#### Next Step
+
+Provision the controlled Windows evidence VM and establish a clean baseline before scenario activity begins.

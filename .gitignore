@@ -9,6 +9,9 @@
 *.key
 *.pem
 
+# Private investigation ground truth
+private/
+
 # Raw forensic disk evidence
 evidence/
 *.E01

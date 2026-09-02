@@ -57,6 +57,16 @@ VM provisioning and evidence acquisition will not begin until additional storage
 
 **Target available storage before VM provisioning:** At least 100-120 GB, with 150 GB or more preferred.
 
+### Storage Remediation
+
+Following the initial assessment, host storage was cleaned and approximately 140 GB of free space became available.
+
+This exceeds the project's minimum target of 100-120 GB for initial VM provisioning, although storage usage will still need to be monitored carefully during disk imaging, memory acquisition, snapshot creation, and forensic analysis.
+
+The project will therefore proceed with the planned single-VM architecture while limiting unnecessary snapshots and duplicate forensic images.
+
+**Storage Status:** Sufficient for initial lab provisioning with active monitoring.
+
 ## Design Rationale
 
 The host has sufficient CPU and memory resources for a modest single-VM laboratory.
@@ -65,12 +75,15 @@ A single evidence VM reduces unnecessary resource contention and keeps the first
 
 The project will remain investigation-led rather than attempting to maximise the number of virtual machines or forensic tools used.
 
+
 ## Status
 
 Host environment assessed.
 
-Lab architecture selected provisionally.
+Virtualisation verified.
 
-Virtualisation has been verified at the host level.
+Initial lab architecture selected.
 
-Storage remediation remains the primary prerequisite before VM provisioning.
+Storage constraint substantially resolved.
+
+The environment is ready for controlled VM provisioning after the investigation scenario is finalised.

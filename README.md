@@ -82,8 +82,23 @@ dfir-lab/
 │
 └── case-01-windows-endpoint/
     ├── case-brief.md
+    ├── scenario-overview.md
+    ├── evidence-expectations.md
+    ├── ground-truth-commitment.md
     ├── evidence-manifest.md
     ├── investigation-notes.md
     ├── timeline.csv
     ├── report/
     └── screenshots/
+
+### Day 2
+
+Completed:
+
+- Resolved the initial storage constraint sufficiently for lab provisioning.
+- Designed the controlled Case 01 scenario.
+- Separated public investigation information from private ground truth.
+- Created an evidence-expectation matrix.
+- Created a SHA-256 integrity commitment for the private scenario plan.
+
+No forensic evidence has yet been generated or analysed.

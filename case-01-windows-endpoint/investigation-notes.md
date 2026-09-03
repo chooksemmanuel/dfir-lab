@@ -80,3 +80,36 @@ Expected artefacts documented during this phase are hypotheses only and must not
 #### Next Step
 
 Provision the controlled Windows evidence VM and establish a clean baseline before scenario activity begins.
+
+---
+
+### Day 3 - Evidence VM Provisioning
+
+#### Actions Completed
+
+- Created a dedicated local storage structure for VM files, ISO files, evidence, and working copies.
+- Downloaded Windows 11 installation media from Microsoft.
+- Calculated and recorded the SHA-256 hash of the installation ISO.
+- Created the LAB-WIN11-01 virtual machine in VMware Workstation.
+- Allocated 2 virtual CPU cores and 4 GB of memory.
+- Configured a 64 GB dynamically allocated virtual disk.
+- Configured NAT networking.
+- Configured UEFI, Secure Boot, and a virtual TPM.
+- Disabled shared folders.
+- Attached the Windows 11 installation ISO.
+
+#### Evidence Examined
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+The evidence endpoint infrastructure has been provisioned, but no operating system or scenario activity has yet been created.
+
+#### Next Step
+
+Install Windows 11, configure the controlled lab account, perform basic updates, and establish a clean baseline before generating scenario activity.

@@ -102,3 +102,16 @@ Completed:
 - Created a SHA-256 integrity commitment for the private scenario plan.
 
 No forensic evidence has yet been generated or analysed.
+
+### Day 3
+
+Completed:
+
+- Created the local heavy-asset storage structure.
+- Recorded and hashed the Windows installation media.
+- Provisioned LAB-WIN11-01 in VMware Workstation.
+- Configured 2 vCPU, 4 GB RAM, a 64 GB virtual disk, NAT networking, UEFI/Secure Boot, and vTPM.
+- Attached the Windows installation media.
+- Kept the VM powered off pending clean operating-system installation.
+
+No forensic evidence has yet been generated or analysed.

@@ -113,3 +113,46 @@ The evidence endpoint infrastructure has been provisioned, but no operating syst
 #### Next Step
 
 Install Windows 11, configure the controlled lab account, perform basic updates, and establish a clean baseline before generating scenario activity.
+
+---
+
+### Day 4 - Windows Installation and Clean Baseline
+
+#### Actions Completed
+
+- Installed Windows 11 on `LAB-WIN11-01`.
+- Configured the endpoint hostname.
+- Verified the Eastern Time timezone configuration.
+- Maintained a separate local administrative setup account, `labadmin`.
+- Created the standard local scenario account, `labuser`.
+- Verified that `labuser` is a member of the Users group and is not a member of the Administrators group.
+- Installed VMware Tools.
+- Installed standard Windows updates.
+- Avoided connecting personal Microsoft, school, work, browser-sync, or cloud-storage accounts.
+- Verified the `labuser` profile.
+- Disconnected the Windows installation media from automatic startup.
+- Created the clean endpoint baseline document.
+- Created the powered-off VMware snapshot `BASELINE-CLEAN-2026-09-04`.
+- Verified approximately 103.3 GB of host storage remained after baseline creation.
+
+#### Evidence Examined
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+The Windows evidence endpoint now has a documented pre-scenario baseline.
+
+No controlled suspicious-user scenario activity has been intentionally generated.
+
+The powered-off baseline snapshot provides a known state to which the environment can be restored if the scenario needs to be repeated.
+
+#### Next Step
+
+Prepare the controlled endpoint for scenario execution.
+
+Scenario activity will be generated using the `labuser` account while actual ground-truth timestamps and actions are recorded separately from the forensic investigation documentation.

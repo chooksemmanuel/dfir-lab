@@ -43,10 +43,20 @@ Raw VM files, ISO files, forensic evidence and working copies are not committed 
 
 ## Current Status
 
-Initial VM hardware provisioning completed.
+Windows 11 installation completed.
 
-Windows 11 installation media is attached.
+The endpoint hostname is `LAB-WIN11-01`.
 
-The VM remains powered off.
+VMware Tools and standard Windows updates have been installed.
 
-Operating system installation has not yet begun.
+A dedicated standard scenario account, `labuser`, has been created.
+
+The `labuser` account is not a member of the local Administrators group.
+
+The Windows installation media has been disconnected from automatic startup.
+
+A clean powered-off baseline snapshot has been created:
+
+`BASELINE-CLEAN-2026-09-04`
+
+Controlled scenario activity has not yet begun.

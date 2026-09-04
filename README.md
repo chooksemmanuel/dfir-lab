@@ -83,6 +83,7 @@ dfir-lab/
 └── case-01-windows-endpoint/
     ├── case-brief.md
     ├── scenario-overview.md
+    ├── baseline.md
     ├── evidence-expectations.md
     ├── ground-truth-commitment.md
     ├── evidence-manifest.md
@@ -115,3 +116,18 @@ Completed:
 - Kept the VM powered off pending clean operating-system installation.
 
 No forensic evidence has yet been generated or analysed.
+
+### Day 4
+
+Completed:
+
+- Installed Windows 11 on `LAB-WIN11-01`.
+- Configured the endpoint hostname and timezone.
+- Created a separate standard scenario user, `labuser`.
+- Verified that `labuser` does not have local administrator privileges.
+- Installed VMware Tools and standard Windows updates.
+- Avoided connecting personal cloud, Microsoft, school, work, or browser-sync accounts.
+- Documented the known pre-scenario endpoint state.
+- Created the powered-off snapshot `BASELINE-CLEAN-2026-09-04`.
+
+No controlled suspicious-user activity has yet been generated or analysed.

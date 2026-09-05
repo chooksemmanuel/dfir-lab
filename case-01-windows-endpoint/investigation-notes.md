@@ -156,3 +156,41 @@ The powered-off baseline snapshot provides a known state to which the environmen
 Prepare the controlled endpoint for scenario execution.
 
 Scenario activity will be generated using the `labuser` account while actual ground-truth timestamps and actions are recorded separately from the forensic investigation documentation.
+
+
+---
+
+### Day 5 - Controlled Scenario Execution Begins
+
+#### Actions Completed
+
+- Logged into `LAB-WIN11-01` using the standard `labuser` account.
+- Generated controlled browser activity.
+- Created four synthetic project documents.
+- Modified `project_notes.txt` after its initial creation.
+- Identified and documented an unintended file-location discrepancy.
+- Moved the synthetic files into the intended `ProjectAtlas` directory.
+- Identified and corrected unintended duplicate file extensions.
+- Maintained a separate private ground-truth execution record.
+- Calculated a SHA-256 hash of the completed Day 05 ground-truth record.
+- Published only the integrity commitment hash.
+
+#### Evidence Examined
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+Controlled scenario activity has begun and the endpoint now contains intentionally generated user artefacts.
+
+The unexpected file-movement and renaming actions are retained as part of the scenario history.
+
+No forensic acquisition or analysis has yet been performed.
+
+#### Next Step
+
+Continue the controlled scenario with command-line activity, file staging, and archive creation while maintaining separate ground-truth documentation.

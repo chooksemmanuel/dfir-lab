@@ -131,3 +131,16 @@ Completed:
 - Created the powered-off snapshot `BASELINE-CLEAN-2026-09-04`.
 
 No controlled suspicious-user activity has yet been generated or analysed.
+
+### Day 5
+
+Completed:
+
+- Began controlled user activity on `LAB-WIN11-01`.
+- Generated browser activity using the standard `labuser` account.
+- Created and modified synthetic project documents.
+- Documented unexpected file-location and filename-extension corrections as part of the real scenario history.
+- Maintained a private timestamped ground-truth execution record.
+- Published a SHA-256 commitment for the completed Day 05 record.
+
+Forensic evidence has not yet been acquired or analysed.

@@ -43,3 +43,21 @@ The record is intentionally excluded from the public repository while the forens
 43CA4CE21D2D3D8FB748AA0A0F6194452B075C85138B08729BC296817CD906CA
 
 After the investigation is complete, the Day 05 ground-truth record can be disclosed and hashed again to verify that it was not modified after this checkpoint.
+
+---
+
+## Day 06 Scenario Execution Commitment
+
+Controlled command-line, file-staging, and archive-creation activity was completed on September 6, 2026.
+
+A private ground-truth execution record contains the actual actions, timestamps, and execution deviations.
+
+The execution record remains excluded from the public repository during the forensic investigation.
+
+**Algorithm:** SHA-256
+
+**SHA-256:**
+
+6673203B06DE5EFF3B7DA90F8D4E9E5B31001D4B3DECCC0DD287EE4261A05376
+
+After the investigation is complete, the Day 06 execution record can be disclosed and hashed again to verify that it was not modified after this checkpoint.

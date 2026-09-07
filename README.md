@@ -144,3 +144,17 @@ Completed:
 - Published a SHA-256 commitment for the completed Day 05 record.
 
 Forensic evidence has not yet been acquired or analysed.
+
+### Day 6
+
+Completed:
+
+- Generated controlled PowerShell activity under `labuser`.
+- Created a synthetic data-staging directory.
+- Copied selected project files into the staging area.
+- Created a ZIP archive from the staged files.
+- Verified the archive contents.
+- Maintained a private timestamped execution record.
+- Published a SHA-256 commitment for the completed Day 06 record.
+
+Forensic evidence has not yet been acquired or analysed.

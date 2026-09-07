@@ -194,3 +194,39 @@ No forensic acquisition or analysis has yet been performed.
 #### Next Step
 
 Continue the controlled scenario with command-line activity, file staging, and archive creation while maintaining separate ground-truth documentation.
+
+---
+
+### Day 6 - Command-Line Activity, File Staging, and Archive Creation
+
+#### Actions Completed
+
+- Continued controlled scenario execution using the standard `labuser` account.
+- Generated normal PowerShell command-line activity.
+- Created a `Staging` directory.
+- Copied three synthetic documents from `ProjectAtlas` into the staging directory.
+- Intentionally excluded `meeting_notes.txt` from the staged collection.
+- Created `project_archive.zip` from the staged files.
+- Verified the contents of the archive without extracting it.
+- Recorded execution deviations encountered during archive verification.
+- Maintained a private timestamped ground-truth execution record.
+- Calculated a SHA-256 hash of the completed Day 06 ground-truth record.
+- Published only the integrity commitment hash.
+
+#### Evidence Examined
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+The endpoint now contains intentionally generated command-line, file-copying, staging, and archive-creation artefacts.
+
+These actions have not yet been examined through forensic acquisition or analysis.
+
+#### Next Step
+
+Continue the controlled scenario with removable-media activity and file deletion while preserving separate ground-truth documentation.

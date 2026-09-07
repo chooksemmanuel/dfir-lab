@@ -61,3 +61,21 @@ The execution record remains excluded from the public repository during the fore
 6673203B06DE5EFF3B7DA90F8D4E9E5B31001D4B3DECCC0DD287EE4261A05376
 
 After the investigation is complete, the Day 06 execution record can be disclosed and hashed again to verify that it was not modified after this checkpoint.
+
+---
+
+## Day 07 Scenario Execution Commitment
+
+Controlled removable-media and file-deletion activity was completed on September 7, 2026.
+
+A private ground-truth record contains the actual actions, timestamps, device-use details, and execution deviations.
+
+The record remains excluded from the public repository during the forensic investigation.
+
+**Algorithm:** SHA-256
+
+**SHA-256:**
+
+30F0C4BBFDEF1B00346BA7769A976474462852A6C7AF9BAF4031B954255D9D39
+
+After the investigation is complete, the Day 07 record can be disclosed and hashed again to verify that it was not modified after this checkpoint.

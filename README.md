@@ -160,6 +160,21 @@ Completed:
 Forensic evidence has not yet been acquired or analysed.
 
 
+### Day 7
+
+Completed:
+
+- Added controlled removable-media activity using a dedicated USB device.
+- Copied `project_archive.zip` to the removable media and verified the copied archive using SHA-256.
+- Deleted `meeting_notes.txt` through the normal Windows deletion workflow and left it in the Recycle Bin.
+- Permanently removed the original `quarterly_summary.txt` from `ProjectAtlas`.
+- Preserved surviving copies of `quarterly_summary.txt` in `Staging` and inside `project_archive.zip`.
+- Maintained a private timestamped ground-truth execution record.
+- Published a SHA-256 commitment for the completed Day 07 record.
+- Preserved the final endpoint state without restoring or clearing scenario artefacts.
+
+No forensic acquisition or forensic analysis had yet been performed at the end of Day 7.
+
 ### Day 8
 
 Completed:

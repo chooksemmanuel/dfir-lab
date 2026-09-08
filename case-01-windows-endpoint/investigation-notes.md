@@ -230,3 +230,43 @@ These actions have not yet been examined through forensic acquisition or analysi
 #### Next Step
 
 Continue the controlled scenario with removable-media activity and file deletion while preserving separate ground-truth documentation.
+
+
+---
+
+### Day 8 - First Forensic Acquisition
+
+#### Actions Completed
+
+- Transitioned from controlled scenario generation into evidence acquisition.
+- Designated the Day 07 removable USB as Evidence Item `E001`.
+- Created dedicated forensic evidence storage outside the public Git repository.
+- Identified the physical USB as a 250 MB USB device.
+- Acquired the complete physical device using Exterro FTK Imager 8.3.0.27.
+- Created a RAW/DD image named `E001_USB.001`.
+- Verified the image using FTK Imager.
+- Confirmed matching MD5 and SHA-1 verification values.
+- Confirmed that FTK Imager reported no bad blocks.
+- Calculated an independent SHA-256 hash using PowerShell.
+- Updated the evidence manifest.
+- Created an acquisition log and chain-of-custody record.
+- Documented the lack of a hardware write blocker as an acquisition limitation.
+- Removed the source USB from further scenario use.
+
+#### Evidence Analysis
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+Evidence acquisition has begun, but no forensic findings have yet been made.
+
+E001 is now preserved as a forensic image and will be examined from a working copy rather than through continued interaction with the source removable media.
+
+#### Next Step
+
+Prepare for volatile-memory acquisition from `LAB-WIN11-01` before acquiring the endpoint disk.

@@ -158,3 +158,19 @@ Completed:
 - Published a SHA-256 commitment for the completed Day 06 record.
 
 Forensic evidence has not yet been acquired or analysed.
+
+
+### Day 8
+
+Completed:
+
+- Began the forensic acquisition phase.
+- Designated the Day 07 removable USB as Evidence Item `E001`.
+- Acquired a complete physical RAW/DD image of the removable media.
+- Verified the image using FTK Imager.
+- Independently calculated a SHA-256 hash.
+- Added E001 to the evidence manifest.
+- Created acquisition and chain-of-custody documentation.
+- Documented acquisition limitations.
+
+No forensic analysis has yet been performed on E001.

@@ -270,3 +270,40 @@ E001 is now preserved as a forensic image and will be examined from a working co
 #### Next Step
 
 Prepare for volatile-memory acquisition from `LAB-WIN11-01` before acquiring the endpoint disk.
+
+
+---
+
+### Day 9 - Volatile Memory Acquisition Preparation
+
+#### Actions Completed
+
+- Kept LAB-WIN11-01 powered off.
+- Reviewed the planned transition from removable-media acquisition to volatile-memory acquisition.
+- Created a dedicated volatile-memory acquisition plan.
+- Defined E002 as the planned memory evidence item.
+- Documented the expected storage requirement.
+- Documented the intrusive nature of live-memory acquisition.
+- Defined the acquisition order before final endpoint disk imaging.
+
+#### Evidence Acquisition
+
+No new evidence was acquired.
+
+#### Evidence Analysis
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+Volatile-memory acquisition requires deliberate preparation because the acquisition process itself changes the running system.
+
+The endpoint was left untouched rather than beginning the acquisition without completing the necessary preparation.
+
+#### Next Step
+
+Prepare dedicated storage and the selected acquisition utility, then acquire E002 from the live Windows endpoint.

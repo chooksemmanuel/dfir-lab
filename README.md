@@ -189,3 +189,15 @@ Completed:
 - Documented acquisition limitations.
 
 No forensic analysis has yet been performed on E001.
+
+### Day 9
+
+Completed:
+
+- Prepared the volatile-memory acquisition workflow.
+- Defined the planned memory image as Evidence Item `E002`.
+- Documented expected storage requirements and acquisition order.
+- Documented the intrusive nature and limitations of live-memory acquisition.
+- Kept the evidence endpoint powered off until the acquisition workflow is ready.
+
+No additional evidence was acquired or analysed on Day 9.

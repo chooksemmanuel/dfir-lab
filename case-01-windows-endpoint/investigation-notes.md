@@ -307,3 +307,28 @@ The endpoint was left untouched rather than beginning the acquisition without co
 #### Next Step
 
 Prepare dedicated storage and the selected acquisition utility, then acquire E002 from the live Windows endpoint.
+
+---
+
+### Day 10 - E002 Acquisition Kit Preparation
+
+#### Actions Completed
+
+- Prepared dedicated evidence storage for E002.
+- Selected WinPmem as the planned volatile-memory acquisition utility.
+- Stored the acquisition utility outside the public Git repository.
+- Calculated and recorded a SHA-256 hash of the acquisition executable.
+- Updated the volatile-memory acquisition plan.
+- Kept LAB-WIN11-01 powered off.
+
+#### Evidence Acquisition
+
+No new evidence was acquired.
+
+#### Evidence Analysis
+
+None.
+
+#### Next Step
+
+Introduce the documented acquisition utility to the live endpoint and acquire E002.

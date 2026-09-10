@@ -201,3 +201,16 @@ Completed:
 - Kept the evidence endpoint powered off until the acquisition workflow is ready.
 
 No additional evidence was acquired or analysed on Day 9.
+
+### Day 10
+
+Completed:
+
+- Prepared dedicated storage for Evidence Item `E002`.
+- Selected and staged the volatile-memory acquisition utility.
+- Calculated a SHA-256 hash of the acquisition executable.
+- Updated the memory-acquisition plan.
+- Kept the evidence endpoint powered off.
+
+E002 has not yet been acquired.
+

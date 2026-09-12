@@ -332,3 +332,51 @@ None.
 #### Next Step
 
 Introduce the documented acquisition utility to the live endpoint and acquire E002.
+
+---
+
+### Day 12 - E002 Volatile Memory Acquisition
+
+#### Actions Completed
+
+- Powered on LAB-WIN11-01 from its current post-scenario state.
+- Used the administrative lab account for acquisition activity.
+- Introduced the previously staged and hashed WinPmem acquisition utility.
+- Verified the acquisition utility against its known SHA-256.
+- Acquired a live memory image from the endpoint.
+- Preserved the resulting memory image as Evidence Item `E002`.
+- Calculated SHA-256 inside the evidence VM before transfer.
+- Transferred the acquired image to dedicated evidence storage on the forensic host.
+- Calculated SHA-256 again against the preserved host copy.
+- Confirmed that the guest and host SHA-256 values matched.
+- Preserved WinPmem and the guest-side acquisition image on the endpoint for later disk acquisition.
+- Shut down the endpoint after memory preservation was confirmed.
+- Documented transfer-handling deviations and the post-reboot volatile-state limitation.
+
+#### Evidence Acquired
+
+**E002 - Post-reboot volatile memory image**
+
+**Size:** 5,368,709,120 bytes
+
+**SHA-256:** `E4E36E18891706E3C933F8290155716914025DFA38EE5B738B4956E77C4B8C44`
+
+#### Evidence Analysis
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+E002 successfully preserves the live volatile-memory state that existed at the time of acquisition.
+
+It does not preserve the earlier volatile state from the original Day 05-Day 07 scenario because the endpoint had previously been shut down.
+
+No forensic conclusions have yet been drawn from the memory image.
+
+#### Next Step
+
+Prepare for final forensic acquisition of the LAB-WIN11-01 virtual disk before beginning evidence analysis.

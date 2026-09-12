@@ -144,3 +144,88 @@ No intentional browsing, deletion, or modification of the source media was perfo
 
 This limitation will be considered during later interpretation of the evidence.
 
+
+---
+
+## E002 - Volatile Memory Acquisition
+
+**Case ID:** DFIR-CASE-001
+
+**Evidence ID:** E002
+
+**Endpoint:** LAB-WIN11-01
+
+**Evidence Type:** Post-reboot volatile memory
+
+**Acquisition Date:** 2026-09-12
+
+**Acquisition Tool:** WinPmem
+
+**Acquisition Executable:** `go-winpmem_amd64_1.0-rc2_signed.exe`
+
+**Acquisition Tool SHA-256:**
+
+`86691BB4AF2C17DD9EC4834C04A99AD51E04F780A07D1B05BC382A5D1892E0C4`
+
+**Guest Acquisition Path:**
+
+`C:\Forensics\E002\LAB-WIN11-01_E002.raw`
+
+**Preserved Host Filename:**
+
+`LAB-WIN-01_E002.raw`
+
+**Preserved Host Location:**
+
+Stored in controlled local evidence storage outside the public Git repository.
+
+**Image Size:** 5,368,709,120 bytes
+
+**WinPmem Reported Acquisition Duration:** 3m39.4113131s
+
+**Image CreationTime:** 2026-09-12 10:45:00
+
+**Image LastWriteTime:** 2026-09-12 10:48:40
+
+**Acquisition Completion Checkpoint:** 2026-09-12 10:49:01.367 -04:00
+
+**Precise Acquisition Start Time:** Not separately recorded.
+
+## Integrity
+
+**SHA-256:**
+
+`E4E36E18891706E3C933F8290155716914025DFA38EE5B738B4956E77C4B8C44`
+
+The SHA-256 was calculated first against the acquired image inside the evidence VM and again against the preserved host copy.
+
+The two values matched exactly.
+
+## Acquisition-Induced Activity
+
+WinPmem reported that its acquisition service stopped after imaging and that its temporary driver was removed from:
+
+`C:\Users\labadmin\AppData\Local\Temp\3763700613.sys`
+
+The WinPmem executable and the guest-side memory image were intentionally left on the endpoint after acquisition so that subsequent disk acquisition may preserve evidence of the acquisition process itself.
+
+## Transfer Handling
+
+The acquired memory image was transferred from the evidence VM to dedicated host evidence storage using a temporary VMware shared folder.
+
+The preserved host copy was named `LAB-WIN-01_E002.raw`, while the guest acquisition filename was `LAB-WIN11-01_E002.raw`.
+
+The filename difference does not indicate a content difference. Matching SHA-256 values confirmed that the guest image and preserved host copy were identical.
+
+An initial guest-side verification of the VMware shared-folder destination returned a path-not-found result even though the transfer had completed successfully. The host-side evidence directory was checked directly and confirmed that the complete image was present.
+
+## Important Limitation
+
+The endpoint had previously been shut down after the controlled scenario activity conducted during earlier days of the case.
+
+Therefore, E002 does not preserve the volatile-memory state that existed during the original Day 05-Day 07 scenario.
+
+E002 represents a post-reboot live-memory acquisition of the same endpoint immediately before final disk acquisition.
+
+No forensic analysis of E002 has yet been performed.
+

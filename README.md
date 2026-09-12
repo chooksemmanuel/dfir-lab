@@ -214,3 +214,18 @@ Completed:
 
 E002 has not yet been acquired.
 
+### Day 12
+
+Completed:
+
+- Acquired Evidence Item `E002`, a live post-reboot memory image of LAB-WIN11-01.
+- Used the previously staged and SHA-256-verified WinPmem acquisition utility.
+- Preserved a 5,368,709,120-byte memory image outside the public repository.
+- Calculated SHA-256 before and after transfer to the forensic host.
+- Confirmed that both integrity values matched.
+- Documented acquisition-induced activity and transfer-handling deviations.
+- Documented that E002 does not preserve the volatile state from the earlier scenario because the endpoint had previously been shut down.
+- Shut down the evidence endpoint after preservation was confirmed.
+
+No forensic analysis of E002 has yet been performed.
+

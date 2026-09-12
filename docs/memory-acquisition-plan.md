@@ -64,6 +64,16 @@ The acquisition utility and associated operator actions may create or alter proc
 
 Those acquisition-related changes will be documented and considered during analysis.
 
+### Post-Reboot Volatile-State Limitation
+
+The endpoint was shut down after the controlled scenario activity performed during earlier days of the case.
+
+As a result, E002 cannot preserve the volatile-memory state that existed during the original Day 05-Day 07 scenario execution.
+
+E002 instead represents a post-reboot live-memory acquisition of the same endpoint immediately before final disk acquisition.
+
+The memory image remains useful for practising memory acquisition and analysis of the current endpoint state, but it will not be represented as evidence of processes or other volatile state that existed before the earlier shutdown.
+
 ## Selected Acquisition Tool
 
 **Tool:** WinPmem
@@ -93,3 +103,15 @@ The memory-acquisition utility has been selected, staged, and hashed.
 E002 has not yet been acquired.
 
 LAB-WIN11-01 remains powered off.
+
+## Current Status
+
+E002 acquisition completed.
+
+The memory image was acquired from the live post-reboot endpoint and preserved outside the public Git repository.
+
+Guest-side and host-side SHA-256 values matched.
+
+The evidence endpoint was subsequently shut down.
+
+No forensic analysis of E002 has yet been performed.

@@ -214,6 +214,18 @@ Completed:
 
 E002 has not yet been acquired.
 
+### Day 11
+
+Completed:
+
+- Took an intentional rest day after ten consecutive days of project work.
+- Kept LAB-WIN11-01 untouched.
+- Performed no evidence acquisition or forensic analysis.
+- Preserved the current case state for the next acquisition step.
+- Prioritised recovery so the volatile-memory acquisition could be completed with proper attention.
+
+No new evidence was acquired or analysed on Day 11.
+
 ### Day 12
 
 Completed:
@@ -229,3 +241,15 @@ Completed:
 
 No forensic analysis of E002 has yet been performed.
 
+
+### Day 13
+
+Completed:
+
+- Created a formal case-status checkpoint.
+- Reviewed the current state of E001, E002, and planned E003.
+- Confirmed that two evidence items have been acquired and hash-verified.
+- Confirmed that forensic analysis has not yet begun.
+- Defined endpoint-disk acquisition as the next major step.
+
+No new evidence was acquired or analysed on Day 13.

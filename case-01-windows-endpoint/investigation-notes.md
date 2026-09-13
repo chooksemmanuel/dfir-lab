@@ -380,3 +380,34 @@ No forensic conclusions have yet been drawn from the memory image.
 #### Next Step
 
 Prepare for final forensic acquisition of the LAB-WIN11-01 virtual disk before beginning evidence analysis.
+
+
+---
+
+### Day 13 - Case Status Checkpoint
+
+#### Actions Completed
+
+- Reviewed the current position of DFIR-CASE-001.
+- Confirmed that E001 has been acquired and hash-verified.
+- Confirmed that E002 has been acquired and hash-verified.
+- Confirmed that E003 remains pending.
+- Confirmed that forensic analysis has not yet begun.
+- Created a dedicated case-status document summarising the evidence and current investigation phase.
+- Defined endpoint-disk acquisition as the next major technical step.
+
+#### Evidence Acquisition
+
+No new evidence was acquired.
+
+#### Evidence Analysis
+
+None.
+
+#### Findings
+
+None.
+
+#### Next Step
+
+Perform an E003 acquisition preflight before acquiring the LAB-WIN11-01 endpoint disk.

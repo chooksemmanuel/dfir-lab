@@ -411,3 +411,31 @@ None.
 #### Next Step
 
 Perform an E003 acquisition preflight before acquiring the LAB-WIN11-01 endpoint disk.
+
+---
+
+### Day 14 - E003 Disk Acquisition Preflight
+
+#### Actions Completed
+
+- Confirmed the LAB-WIN11-01 VM remained powered off.
+- Identified the VM configuration file.
+- Identified the base VMDK and current snapshot/delta VMDK.
+- Confirmed that one snapshot exists: `BASELINE-CLEAN-2026-09-04`.
+- Confirmed that the current VM configuration references `LAB-WIN11-01-000001.vmdk`.
+- Confirmed that the current endpoint state depends on the VMware snapshot chain.
+- Measured the VM folder at approximately 41.38 GB.
+- Measured approximately 65.0 GB of free host storage.
+- Determined that additional storage planning is required before E003 acquisition.
+
+#### Evidence Acquisition
+
+None.
+
+#### Evidence Analysis
+
+None.
+
+#### Next Step
+
+Confirm sufficient evidence-storage capacity and select the E003 disk-acquisition method.

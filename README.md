@@ -253,3 +253,16 @@ Completed:
 - Defined endpoint-disk acquisition as the next major step.
 
 No new evidence was acquired or analysed on Day 13.
+
+### Day 14
+
+Completed:
+
+- Performed the E003 endpoint-disk acquisition preflight.
+- Identified the VMware base disk and snapshot/delta disk.
+- Confirmed that the current VM state depends on an existing snapshot chain.
+- Confirmed that the clean baseline snapshot remains intact.
+- Reviewed current evidence-storage requirements.
+- Determined that additional storage planning is required before disk acquisition.
+
+No new evidence was acquired or analysed on Day 14.

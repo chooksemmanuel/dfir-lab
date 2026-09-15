@@ -266,3 +266,14 @@ Completed:
 - Determined that additional storage planning is required before disk acquisition.
 
 No new evidence was acquired or analysed on Day 14.
+
+### Day 15
+
+Completed:
+
+- Kept LAB-WIN11-01 powered off following the E003 acquisition preflight.
+- Performed no evidence acquisition or forensic analysis.
+- Preserved the existing VMware snapshot chain without modification.
+- Intentionally paused technical lab work for the day before continuing with E003 preparation.
+
+No new evidence was acquired or analysed on Day 15.

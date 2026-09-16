@@ -277,3 +277,16 @@ Completed:
 - Intentionally paused technical lab work for the day before continuing with E003 preparation.
 
 No new evidence was acquired or analysed on Day 15.
+
+
+### Day 16
+
+Completed:
+
+- Confirmed that LAB-WIN11-01 was not running.
+- Reviewed host storage before E003 preservation.
+- Confirmed that current host free space is insufficient for a comfortable full preservation workflow.
+- Inspected the existing VMware lock directory and confirmed no active `vmware-vmx` process was running.
+- Deferred E003 preservation until separate SSD storage is available.
+
+No evidence was acquired or analysed on Day 16.

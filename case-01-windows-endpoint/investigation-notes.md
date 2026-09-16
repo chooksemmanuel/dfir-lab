@@ -466,3 +466,29 @@ None.
 #### Next Step
 
 Resume E003 endpoint-disk acquisition preparation.
+
+---
+
+### Day 16 - E003 Storage and Lock-State Check
+
+#### Actions Completed
+
+- Confirmed zero running VMware virtual machines.
+- Confirmed no active `vmware-vmx` process.
+- Reviewed approximately 64.5 GB of free host storage.
+- Reconfirmed that the VMware source set requires approximately 41 GB of storage.
+- Inspected `LAB-WIN11-01.vmx.lck`.
+- Observed that the lock directory had not been modified since 2026-09-08.
+- Deferred E003 preservation until separate SSD storage is available.
+
+#### Evidence Acquisition
+
+None.
+
+#### Evidence Analysis
+
+None.
+
+#### Next Step
+
+Connect separate SSD storage and prepare E003 preservation.

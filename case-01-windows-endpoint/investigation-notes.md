@@ -492,3 +492,48 @@ None.
 #### Next Step
 
 Connect separate SSD storage and prepare E003 preservation.
+
+---
+
+### Day 17 - E003 VMware Endpoint Preservation
+
+#### Actions Completed
+
+- Connected dedicated external evidence storage.
+- Confirmed LAB-WIN11-01 remained powered off.
+- Confirmed no active `vmware-vmx` process.
+- Preserved the complete VMware source set to separate external storage.
+- Preserved the existing base disk and active snapshot/delta disk together.
+- Preserved the previously observed VMware lock directory rather than deleting it.
+- Generated SHA-256 manifests independently for the source and preserved copy.
+- Compared all files using relative path, exact byte length, and SHA-256.
+- Confirmed all 20 source files matched the preserved copies.
+- Confirmed source and destination sizes were both 44,436,161,087 bytes.
+
+#### Evidence Acquired
+
+**E003 - Powered-off VMware endpoint preservation set**
+
+**Files:** 20
+
+**Total Size:** 44,436,161,087 bytes
+
+**Integrity Verification:** Passed
+
+#### Evidence Analysis
+
+None.
+
+#### Findings
+
+None.
+
+#### Interpretation
+
+E003 preserves the complete VMware file set representing the current powered-off state of LAB-WIN11-01.
+
+E003 is a verified file-level preservation set and is not being represented as a sector-by-sector forensic image of the host filesystem.
+
+#### Next Step
+
+Prepare a verified working copy and analysis environment while keeping the preserved E003 set untouched.

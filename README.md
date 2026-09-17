@@ -290,3 +290,18 @@ Completed:
 - Deferred E003 preservation until separate SSD storage is available.
 
 No evidence was acquired or analysed on Day 16.
+
+
+### Day 17
+
+Completed:
+
+- Preserved Evidence Item E003 to dedicated external SSD storage.
+- Copied the complete powered-off VMware source set, including the base disk and active snapshot/delta disk.
+- Preserved 20 files totalling 44,436,161,087 bytes.
+- Generated independent source and destination SHA-256 manifests.
+- Verified every preserved file using relative path, exact byte length, and SHA-256.
+- Confirmed zero verification differences.
+- Preserved the original VMware source and E003 copy without beginning forensic analysis.
+
+E003 is documented as a verified VMware preservation set, not as a sector-by-sector disk image.

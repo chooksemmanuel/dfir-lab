@@ -229,3 +229,86 @@ E002 represents a post-reboot live-memory acquisition of the same endpoint immed
 
 No forensic analysis of E002 has yet been performed.
 
+
+---
+
+## E003 - VMware Endpoint Preservation
+
+**Case ID:** DFIR-CASE-001
+
+**Evidence ID:** E003
+
+**Endpoint:** LAB-WIN11-01
+
+**Evidence Type:** Powered-off VMware virtual-machine preservation set
+
+**Preservation Date:** 2026-09-17
+
+**Preservation Start Checkpoint:** 2026-09-17 12:35:18.594 -04:00
+
+### Source
+
+`C:\Users\DELL\Documents\DFIR-Lab-Assets\VMs`
+
+**Source Files:** 20
+
+**Source Bytes:** 44,436,161,087
+
+**Source Filesystem:** NTFS
+
+The source set contained the base VMware disk, active snapshot/delta disk, VM configuration and supporting files required to preserve the current VM state.
+
+The existing VMware lock directory was preserved rather than removed.
+
+### Destination
+
+`F:\DFIR-Lab-Evidence\DFIR-CASE-001\E003-VM\original`
+
+**Device:** Kingston XS1000
+
+**Destination Filesystem:** exFAT
+
+### Preservation Method
+
+The complete powered-off VMware source directory was copied using Robocopy.
+
+Robocopy started at approximately 12:43:01 PM and completed at approximately 12:45:45 PM.
+
+**Robocopy Exit Code:** 1
+
+**Files Copied:** 20
+
+**Failed:** 0
+
+**Mismatches:** 0
+
+**Extras:** 0
+
+### Integrity Verification
+
+A SHA-256 manifest was generated from the source before preservation.
+
+A separate SHA-256 manifest was generated from the preserved copy after transfer.
+
+Verification compared:
+
+- relative file path
+- exact byte length
+- SHA-256
+
+All 20 files matched.
+
+**Verification Result:** PASSED
+
+Source and preserved-copy byte counts were identical at 44,436,161,087 bytes.
+
+Timestamp fields were not used as the primary integrity criterion because the source and destination filesystems differ.
+
+### Preservation Scope
+
+E003 is a verified preservation copy of the complete powered-off VMware source set.
+
+It is not represented as a sector-by-sector forensic image of the host NTFS filesystem.
+
+No forensic analysis was performed during preservation.
+

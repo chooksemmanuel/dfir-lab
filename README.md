@@ -305,3 +305,17 @@ Completed:
 - Preserved the original VMware source and E003 copy without beginning forensic analysis.
 
 E003 is documented as a verified VMware preservation set, not as a sector-by-sector disk image.
+
+### Day 18
+
+Completed:
+
+- Began forensic analysis of E001.
+- Created and SHA-256-verified a working copy of the USB image.
+- Opened E001 in FTK Imager.
+- Identified the FAT16 filesystem and `DFIR_CASE_001` directory.
+- Identified and inspected `project_archive.zip`.
+- Confirmed that the archive contained three project-related files.
+- Observed a possible deleted archive entry for later validation.
+
+This was the first day of evidence analysis rather than evidence generation or acquisition.

@@ -537,3 +537,56 @@ E003 is a verified file-level preservation set and is not being represented as a
 #### Next Step
 
 Prepare a verified working copy and analysis environment while keeping the preserved E003 set untouched.
+
+---
+
+### Day 18 - Initial Analysis of E001 USB Evidence
+
+#### Actions Completed
+
+- Created a working copy of E001 for analysis.
+- Verified that the original E001 image and working copy had identical SHA-256 values.
+- Opened the working copy in Exterro FTK Imager 8.3.0.27.
+- Identified the FAT16 filesystem.
+- Located the `DFIR_CASE_001` directory.
+- Identified a live `project_archive.zip` file.
+- Inspected the contents of the ZIP archive.
+- Observed a possible deleted directory entry associated with `project_archive.zip`.
+
+#### Integrity Verification
+
+**Original E001 SHA-256:**
+
+`B966EEFB6AE74A2280F82688F95A797B7036872A2967326A7657B23E3CD9C7F3`
+
+**Working Copy SHA-256:**
+
+`B966EEFB6AE74A2280F82688F95A797B7036872A2967326A7657B23E3CD9C7F3`
+
+**Result:** MATCH
+
+#### Observed Evidence
+
+The directory `DFIR_CASE_001` was present on the FAT16 volume.
+
+A live archive named `project_archive.zip` was present with a size of 810 bytes.
+
+FTK Imager parsed the archive and displayed the following files:
+
+- `client_contacts.csv` - 199 bytes
+- `project_notes.txt` - 250 bytes
+- `quarterly_summary.txt` - 164 bytes
+
+A second `project_archive.zip` entry with a deleted-file indicator was also visible.
+
+The deletion status and significance of that entry have not yet been independently validated through filesystem metadata.
+
+#### Findings
+
+E001 supports the presence of a ZIP archive containing three project-related files.
+
+At this stage, the evidence supports the existence and contents of the archive, but no conclusion is being made yet about intent or broader user activity.
+
+#### Next Step
+
+Continue analysis using additional evidence sources and later correlate E001 findings with endpoint artefacts from E003.

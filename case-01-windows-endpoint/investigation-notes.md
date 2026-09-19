@@ -590,3 +590,90 @@ At this stage, the evidence supports the existence and contents of the archive, 
 #### Next Step
 
 Continue analysis using additional evidence sources and later correlate E001 findings with endpoint artefacts from E003.
+
+---
+
+### Day 19 - Initial E002 Memory Analysis
+
+#### Actions Completed
+
+- Created a verified working copy of E002 for analysis.
+- Analysed the working copy using Volatility 3.
+- Successfully ran `windows.info`, `windows.pslist`, `windows.pstree`, and `windows.cmdline`.
+- Reviewed the live system and process state captured in the post-reboot memory image.
+- Performed a targeted search for acquisition-related and interactive processes.
+
+#### Analysis Tool
+
+**Tool:** Volatility 3
+
+**Observed Framework Version:** 2.28.2
+
+#### System Information
+
+Volatility identified the memory image as a 64-bit Windows system.
+
+Observed information included:
+
+- Windows kernel family: Windows 10
+- 64-bit architecture
+- 2 processors
+- System time: `2026-09-12 14:45:01 UTC`
+
+#### Process Observations
+
+The memory image contained an active interactive Windows session.
+
+Observed process activity included:
+
+- `explorer.exe`
+- `WindowsTerminal.exe`
+- `OpenConsole.exe`
+- `powershell.exe`
+- VMware Tools processes including `vmtoolsd.exe`
+- standard Windows services and security processes
+
+The process tree showed:
+
+`explorer.exe -> WindowsTerminal.exe -> powershell.exe`
+
+`powershell.exe` was observed with a creation time of:
+
+`2026-09-12 14:11:05 UTC`
+
+The command-line plugin identified the PowerShell executable path but did not expose the individual commands entered inside the shell.
+
+#### Acquisition-Related Search
+
+A targeted search was performed for:
+
+- `winpmem`
+- `powershell`
+- `explorer`
+- `vmtoolsd`
+- `labadmin`
+- `C:\Forensics`
+
+The generated `pslist`, `pstree`, and `cmdline` outputs contained matches for PowerShell, Explorer, VMware Tools, and paths associated with the `labadmin` profile.
+
+No `winpmem` or `C:\Forensics` match was observed in these selected plugin outputs.
+
+This absence is not interpreted as proof that WinPmem-related data does not exist elsewhere in the memory image.
+
+#### Findings
+
+E002 independently establishes that an interactive administrative Windows session was active at the time represented by the post-reboot memory acquisition.
+
+Windows Terminal and PowerShell were active during the captured state.
+
+The memory image also supports that the endpoint was running inside VMware through the presence of VMware Tools processes.
+
+#### Limitation
+
+E002 represents the post-reboot state of LAB-WIN11-01 and does not preserve the volatile state from the original Day 05-Day 07 scenario.
+
+Therefore, these memory findings will not be used as proof that the same processes existed during the earlier controlled scenario.
+
+#### Next Step
+
+Begin filesystem and user-activity analysis of E003 and later correlate persistent endpoint artefacts with findings from E001 and E002.

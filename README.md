@@ -319,3 +319,21 @@ Completed:
 - Observed a possible deleted archive entry for later validation.
 
 This was the first day of evidence analysis rather than evidence generation or acquisition.
+
+
+### Day 20
+
+Completed:
+
+- Created and verified an E003 analysis working copy.
+- Confirmed all 20 working-copy files matched preserved E003 using SHA-256.
+- Created an Autopsy 4.20.0 analysis case.
+- Attempted direct ingestion of the active VMware snapshot VMDK.
+- Documented the resulting filesystem-detection failure.
+- Created a consolidated derived VMDK from the verified working snapshot chain.
+- Calculated and recorded the derived disk SHA-256.
+- Successfully added the derived endpoint disk to Autopsy for analysis.
+
+The preserved E003 evidence set remained unchanged.
+
+No endpoint finding was concluded on Day 20.

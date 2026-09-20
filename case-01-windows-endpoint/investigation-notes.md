@@ -677,3 +677,104 @@ Therefore, these memory findings will not be used as proof that the same process
 #### Next Step
 
 Begin filesystem and user-activity analysis of E003 and later correlate persistent endpoint artefacts with findings from E001 and E002.
+
+---
+
+### Day 20 - E003 Analysis Environment Preparation
+
+#### Actions Completed
+
+- Created a complete working copy of the preserved E003 VMware evidence set.
+- Generated SHA-256 values for the working copy.
+- Compared the working copy against the preserved E003 manifest.
+- Confirmed all 20 files matched by relative path, exact byte length, and SHA-256.
+- Created an Autopsy analysis case for E003.
+- Initially attempted to ingest the active VMware snapshot/delta VMDK directly.
+- Autopsy returned an error indicating that it could not determine the filesystem type.
+- Did not modify the preserved E003 evidence or VMware snapshot chain.
+- Generated a consolidated derived analysis VMDK from the verified E003 working copy using VMware Virtual Disk Manager.
+- Calculated a SHA-256 hash for the derived VMDK.
+- Created a clean Autopsy case and successfully added the derived VMDK as the analysis data source.
+
+#### Analysis Tool
+
+**Autopsy Version:** 4.20.0
+
+**Analysis Case:** `DFIR-CASE-001-E003-Analysis`
+
+**Case Number:** `DFIR-CASE-001`
+
+#### Working Copy Verification
+
+**Preserved File Count:** 20
+
+**Working File Count:** 20
+
+**Verification Result:** PASSED
+
+No differences were identified between the preserved E003 set and its working copy using relative path, byte length, and SHA-256.
+
+#### Direct Snapshot Ingest Attempt
+
+The active VMware snapshot/delta disk:
+
+`LAB-WIN11-01-000001.vmdk`
+
+was initially supplied to Autopsy from the verified working copy.
+
+Autopsy reported:
+
+`Cannot determine file system type`
+
+The direct snapshot ingest was therefore discontinued.
+
+The base or snapshot evidence files were not modified in response to this error.
+
+#### Derived Analysis Disk
+
+A consolidated VMDK was generated from the verified working VMware snapshot chain using VMware Virtual Disk Manager.
+
+**Derived Filename:**
+
+`LAB-WIN11-01-FLATTENED.vmdk`
+
+**Size:**
+
+36,425,564,160 bytes
+
+**SHA-256:**
+
+`F7421DD1F2FDB75D2DE69B333ED4096EE2753053BF6B23DAC03045C4428061DA`
+
+The derived VMDK is an analysis artefact and is not treated as a replacement for preserved Evidence Item E003.
+
+#### Autopsy Ingest
+
+The derived VMDK was successfully accepted by Autopsy 4.20.0.
+
+Selected ingest modules included:
+
+- Recent Activity
+- File Type Identification
+- Extension Mismatch Detector
+- Embedded File Extractor
+- Encryption Detection
+- Interesting Files Identifier
+
+#### Findings
+
+No endpoint-forensic finding was concluded on Day 20.
+
+The purpose of the day was to establish a verified and reproducible analysis environment for E003.
+
+#### Next Step
+
+Begin filesystem and user-activity analysis of E003, focusing on:
+
+- `ProjectAtlas`
+- `Staging`
+- `project_archive.zip`
+- deleted-file artefacts
+- Recycle Bin artefacts
+- user-profile activity
+- persistent evidence of removable-media interaction

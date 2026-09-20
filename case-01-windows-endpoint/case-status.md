@@ -184,3 +184,5 @@ Two evidence items have been acquired.
 
 One primary evidence source remains to be preserved before forensic analysis begins.
 
+
+Current Phase: Evidence analysis

@@ -114,3 +114,4 @@ All 20 files matched.
 
 \*\*Canonical Manifest SHA-256:\*\* `8768404A2653EA7490D6368D77AB72D3127596D5A2FB495B5B254E7EB14DE595`
 
+| E003 | LAB-WIN11-01 VMware endpoint | Preserved and hash-verified | Analysis environment prepared |

@@ -337,3 +337,17 @@ Completed:
 The preserved E003 evidence set remained unchanged.
 
 No endpoint finding was concluded on Day 20.
+
+### Day 21
+
+Completed:
+
+- Began filesystem analysis of E003 in Autopsy.
+- Identified the primary Windows partition.
+- Confirmed that the Windows volume is protected by BitLocker.
+- Verified that the volume remained 100% encrypted while appearing unlocked in the running endpoint.
+- Confirmed that no BitLocker key protectors were present.
+- Documented the post-acquisition endpoint check separately from preserved E003.
+- Defined a decrypted analysis-clone workflow as the next step.
+
+No user-file findings were concluded because the encrypted filesystem was not yet accessible in the analysis environment.

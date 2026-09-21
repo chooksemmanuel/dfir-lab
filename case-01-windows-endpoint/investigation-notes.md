@@ -778,3 +778,60 @@ Begin filesystem and user-activity analysis of E003, focusing on:
 - Recycle Bin artefacts
 - user-profile activity
 - persistent evidence of removable-media interaction
+
+
+---
+
+### Day 21 - E003 Filesystem Access and BitLocker Identification
+
+#### Actions Completed
+
+- Opened the E003 derived analysis disk in Autopsy 4.20.0.
+- Identified the primary Windows partition as `vol6`.
+- Observed that the expected Windows filesystem contents, including `Users`, were not available for normal browsing.
+- Reviewed the Autopsy Encryption Detection result.
+- Confirmed that Autopsy identified BitLocker encryption on `vol6`.
+- Performed a post-acquisition check on LAB-WIN11-01 to understand the BitLocker state.
+- No changes were made to preserved Evidence Item E003.
+
+#### Autopsy Observation
+
+Autopsy reported:
+
+`Bitlocker encryption detected`
+
+for the Windows partition represented by `vol6`.
+
+#### BitLocker State Observed on the Running Endpoint
+
+The post-acquisition endpoint check reported:
+
+- BitLocker Version: 2.0
+- Conversion Status: Used Space Only Encrypted
+- Percentage Encrypted: 100%
+- Encryption Method: XTS-AES 128
+- Protection Status: Protection Off
+- Lock Status: Unlocked
+- Key Protectors: None Found
+
+No recovery password or other BitLocker protector was identified.
+
+#### Evidence Handling Note
+
+LAB-WIN11-01 was powered on after E003 had already been preserved and integrity-verified.
+
+The resulting activity is therefore considered post-acquisition activity and does not alter the preserved E003 evidence set.
+
+The preserved E003 copy remains the authoritative evidence source for subsequent analysis.
+
+#### Finding
+
+The lack of visible Windows user files in Autopsy was attributable to BitLocker encryption on the Windows partition rather than absence of the expected filesystem.
+
+#### Limitation
+
+Autopsy 4.20.0 could identify the BitLocker-protected partition but did not expose the encrypted Windows filesystem for analysis in the current workflow.
+
+#### Next Step
+
+Create a separate disposable analysis clone derived from the verified E003 working material and obtain a decrypted analysis artefact without modifying preserved E003.

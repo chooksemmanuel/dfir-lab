@@ -835,3 +835,87 @@ Autopsy 4.20.0 could identify the BitLocker-protected partition but did not expo
 #### Next Step
 
 Create a separate disposable analysis clone derived from the verified E003 working material and obtain a decrypted analysis artefact without modifying preserved E003.
+
+---
+
+### Day 22 - Creation of Decrypted E003 Analysis Artefact
+
+#### Actions Completed
+
+- Continued preparation of E003 for filesystem analysis.
+- Created a disposable decryption workflow while maintaining the preserved E003 evidence set separately.
+- Initiated full BitLocker decryption of the Windows volume.
+- Confirmed the Windows volume reached:
+  - Conversion Status: Fully Decrypted
+  - Percentage Encrypted: 0.0%
+  - Encryption Method: None
+- Identified that the original LAB-WIN11-01 VM had inadvertently been booted and decrypted instead of the intended disposable clone.
+- Confirmed that this activity occurred after E003 had already been preserved and integrity-verified.
+- Treated the modified original VM only as a post-acquisition processing source.
+- Consolidated the post-acquisition decrypted VMware snapshot chain into a new derived VMDK.
+- Calculated and recorded a SHA-256 hash for the derived analysis disk.
+- Added the derived decrypted disk to a clean Autopsy 4.20.0 analysis case.
+- Successfully exposed the Windows filesystem for analysis.
+
+#### Workflow Deviation
+
+The intended workflow was to decrypt a disposable clone of the E003 working copy.
+
+During execution, the original LAB-WIN11-01 VM was inadvertently booted instead.
+
+This was identified by comparing VMware disk modification timestamps and log activity.
+
+Because E003 had already been preserved and independently hash-verified before this occurred, the preserved evidence item was not modified.
+
+The original VM after this point is therefore considered a post-acquisition processing source rather than the authoritative preserved evidence.
+
+#### Derived Analysis Artefact
+
+**Filename:**
+
+`LAB-WIN11-01-DECRYPTED-POSTACQ.vmdk`
+
+**Size:**
+
+38,913,048,576 bytes
+
+**SHA-256:**
+
+`1DD35A8CE98FAD6BAD7B9E5A4E9E50EC9D27FDBABDEA721F8A1C6B84FD8F7BFD`
+
+The derived VMDK is an analysis artefact and is not represented as Evidence Item E003 itself.
+
+#### Autopsy Result
+
+Autopsy successfully exposed the primary Windows filesystem.
+
+Visible root-level artefacts included:
+
+- `$Recycle.Bin`
+- `Program Files`
+- `Program Files (x86)`
+- `ProgramData`
+- `Users`
+- `Windows`
+
+A non-critical filesystem-identification warning remained for the Microsoft Reserved partition.
+
+#### Findings
+
+No scenario-related endpoint finding was concluded on Day 22.
+
+The purpose of the day was to overcome the BitLocker analysis barrier and establish a usable decrypted filesystem for subsequent examination.
+
+#### Next Step
+
+Begin endpoint filesystem analysis under:
+
+`Users\labuser\Documents`
+
+with focus on:
+
+- `ProjectAtlas`
+- `Staging`
+- `project_archive.zip`
+- surviving and deleted copies of scenario files
+- Recycle Bin artefacts

@@ -351,3 +351,17 @@ Completed:
 - Defined a decrypted analysis-clone workflow as the next step.
 
 No user-file findings were concluded because the encrypted filesystem was not yet accessible in the analysis environment.
+
+### Day 22
+
+Completed:
+
+- Completed BitLocker decryption for E003 analysis preparation.
+- Documented a workflow deviation in which the original VM was inadvertently decrypted after E003 had already been preserved.
+- Confirmed that preserved E003 remained unchanged.
+- Created a consolidated post-acquisition decrypted analysis VMDK.
+- Recorded the derived disk SHA-256.
+- Successfully loaded the decrypted derived disk into Autopsy.
+- Confirmed that the Windows filesystem, including `Users`, `Windows`, `Program Files`, and `$Recycle.Bin`, is now accessible for analysis.
+
+No scenario-related finding was concluded on Day 22.

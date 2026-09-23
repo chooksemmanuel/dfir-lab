@@ -919,3 +919,114 @@ with focus on:
 - `project_archive.zip`
 - surviving and deleted copies of scenario files
 - Recycle Bin artefacts
+
+---
+
+### Day 23 - E003 Filesystem Activity Reconstruction
+
+#### Actions Completed
+
+- Examined `Users\labuser\Documents` in the decrypted E003 analysis artefact.
+- Examined the `ProjectAtlas` directory.
+- Examined the `Staging` directory.
+- Inspected the endpoint copy of `project_archive.zip`.
+- Searched E003 for:
+  - `quarterly_summary.txt`
+  - `meeting_notes.txt`
+  - `project_archive.zip`
+- Reviewed `$Recycle.Bin` directory structure.
+- Distinguished allocated files from unallocated/deleted filesystem entries.
+
+#### Documents Directory
+
+Autopsy identified the following relevant items under:
+
+`Users\labuser\Documents`
+
+- `ProjectAtlas`
+- `Staging`
+- `project_archive.zip`
+
+The endpoint copy of `project_archive.zip` was:
+
+- Size: 810 bytes
+- Created: `2026-09-06 22:54:02 EDT`
+- Modified: `2026-09-06 22:54:03 EDT`
+- Status: Allocated
+
+#### ProjectAtlas
+
+The directory contained allocated copies of:
+
+- `client_contacts.csv` - 199 bytes
+- `project_notes.txt` - 250 bytes
+
+Autopsy also identified unallocated entries for:
+
+- `meeting_notes.txt` - 168 bytes
+- `quarterly_summary.txt` - 164 bytes
+
+The unallocated status supports that these files no longer existed as normal allocated files in their original ProjectAtlas location at the time represented by E003.
+
+The unallocated entries displayed later filesystem metadata timestamps, but these are not yet being treated as definitive deletion times pending Recycle Bin correlation.
+
+#### Staging
+
+The `Staging` directory contained allocated copies of:
+
+- `client_contacts.csv` - 199 bytes
+- `project_notes.txt` - 250 bytes
+- `quarterly_summary.txt` - 164 bytes
+
+The staging copies retained earlier content-modification times while showing later creation times associated with their placement in the Staging directory.
+
+This supports the existence of separate staged copies rather than modification of the original ProjectAtlas files in place.
+
+#### Archive Contents
+
+Autopsy parsed `project_archive.zip` and identified:
+
+- `client_contacts.csv` - 199 bytes
+- `project_notes.txt` - 250 bytes
+- `quarterly_summary.txt` - 164 bytes
+
+These contents are consistent with the archive previously observed independently in E001.
+
+#### Filename Search Results
+
+Searches identified multiple filesystem artefacts associated with `quarterly_summary.txt`, including:
+
+- an allocated copy associated with the Staging workflow
+- an unallocated 164-byte entry associated with the earlier ProjectAtlas state
+- shortcut-related artefacts
+
+Searches for `meeting_notes.txt` identified:
+
+- an unallocated 168-byte file entry
+- shortcut-related artefacts
+
+Searches for `project_archive.zip` identified the allocated 810-byte endpoint archive and associated filesystem slack.
+
+#### Recycle Bin
+
+Windows Recycle Bin structures and multiple SID-specific directories were present.
+
+No `$I` / `$R` pair has yet been conclusively attributed to `meeting_notes.txt`.
+
+Recycle Bin attribution is therefore deferred until the metadata records are decoded directly.
+
+#### Findings
+
+E003 supports the following sequence at the filesystem level:
+
+1. Project-related files existed within `ProjectAtlas`.
+2. Selected files existed separately within `Staging`.
+3. `project_archive.zip` was created and contained three staged project files.
+4. `meeting_notes.txt` and `quarterly_summary.txt` were no longer allocated in their original ProjectAtlas location.
+5. A separate allocated copy of `quarterly_summary.txt` survived in Staging.
+
+These findings are derived from the endpoint evidence rather than the private scenario ground truth.
+
+#### Next Step
+
+Decode the Windows Recycle Bin records, attribute deleted items to their original paths, and begin constructing the evidence-supported forensic timeline.

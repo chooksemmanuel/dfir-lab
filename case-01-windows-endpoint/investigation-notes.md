@@ -1030,3 +1030,67 @@ These findings are derived from the endpoint evidence rather than the private sc
 #### Next Step
 
 Decode the Windows Recycle Bin records, attribute deleted items to their original paths, and begin constructing the evidence-supported forensic timeline.
+
+---
+
+### Day 24 - Recycle Bin Attribution and Forensic Timeline
+
+#### Actions Completed
+
+- Reviewed parsed Windows Recycle Bin artifacts in Autopsy.
+- Correlated Recycle Bin records with previously identified unallocated ProjectAtlas files.
+- Confirmed original paths and deletion timestamps for two scenario files.
+- Began populating the forensic timeline using evidence-derived timestamps rather than private ground truth.
+
+#### Recycle Bin Findings
+
+Autopsy identified two parsed Recycle Bin records.
+
+**meeting_notes.txt**
+
+Original path:
+
+`C:\Users\labuser\Documents\ProjectAtlas\meeting_notes.txt`
+
+Deletion time:
+
+`2026-09-07 13:05:35 EDT`
+
+The record correlates with the previously observed 168-byte unallocated `meeting_notes.txt` entry in ProjectAtlas.
+
+**quarterly_summary.txt**
+
+Original path:
+
+`C:\Users\labuser\Documents\ProjectAtlas\quarterly_summary.txt`
+
+Deletion time:
+
+`2026-09-07 13:14:07 EDT`
+
+The record correlates with the previously observed 164-byte unallocated ProjectAtlas entry.
+
+A separate allocated copy of `quarterly_summary.txt` remains present in the Staging directory.
+
+#### Timeline Development
+
+The forensic timeline was populated with evidence-supported events covering:
+
+- creation of staged file copies
+- creation and modification of `project_archive.zip`
+- Recycle Bin deletion of `meeting_notes.txt`
+- Recycle Bin deletion of `quarterly_summary.txt`
+
+Later access timestamps associated with acquisition, analysis, and post-acquisition processing were excluded from the original scenario timeline.
+
+#### Findings
+
+E003 now supports a chronological sequence in which selected project files were copied into a staging directory, an archive was subsequently created, and two files were later deleted from their original ProjectAtlas location.
+
+Recycle Bin metadata provides direct evidence of the original file paths and deletion timestamps.
+
+The surviving Staging copy of `quarterly_summary.txt` demonstrates that deletion of the original ProjectAtlas copy did not remove every copy of the file from the endpoint.
+
+#### Next Step
+
+Correlate removable-media artifacts and browser/command activity with the filesystem timeline and E001 USB evidence.

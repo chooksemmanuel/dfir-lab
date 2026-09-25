@@ -1094,3 +1094,77 @@ The surviving Staging copy of `quarterly_summary.txt` demonstrates that deletion
 #### Next Step
 
 Correlate removable-media artifacts and browser/command activity with the filesystem timeline and E001 USB evidence.
+
+---
+
+### Day 25 - Removable Media and Cross-Source Correlation
+
+#### Actions Completed
+
+- Reviewed USB-device artifacts recovered from E003.
+- Identified a removable-storage artifact associated with a GEMBIRD DM8261 Flashdisc.
+- Exported the endpoint copy of `project_archive.zip` from E003.
+- Exported the USB copy of `project_archive.zip` from the E001 working image.
+- Calculated SHA-256 values for both copies.
+- Compared the files by exact byte length and SHA-256.
+
+#### USB Device Artifact
+
+Autopsy identified a removable-media artifact with:
+
+- Device Model: `DM8261 Flashdisc`
+- Device Make: `GEMBIRD`
+- Timestamp: `2026-09-07 11:59:49 EDT`
+
+This establishes removable-storage activity on the endpoint during the relevant scenario period.
+
+#### E003 Endpoint Archive
+
+Filename:
+
+`project_archive.zip`
+
+Size:
+
+810 bytes
+
+SHA-256:
+
+`1AB794E40D39B8DF9970A30ACE90E597B7EB68F9A539E5E82FB2BBC3F8199CD4`
+
+#### E001 USB Archive
+
+Filename:
+
+`project_archive.zip`
+
+Size:
+
+810 bytes
+
+SHA-256:
+
+`1AB794E40D39B8DF9970A30ACE90E597B7EB68F9A539E5E82FB2BBC3F8199CD4`
+
+#### Cross-Source Verification
+
+The E001 and E003 copies are identical in both exact byte length and SHA-256.
+
+This establishes that the archive recovered from the removable-media image is byte-for-byte identical to the archive recovered from the endpoint.
+
+#### Finding
+
+Evidence from two independently preserved sources now correlates:
+
+1. E003 contains `project_archive.zip` on the endpoint.
+2. E003 records removable-media activity involving a flash storage device.
+3. E001 contains a copy of `project_archive.zip`.
+4. The E001 and E003 archive copies have identical SHA-256 values.
+
+This strongly supports movement of the same archive between the endpoint and removable media.
+
+The USB-device artifact and hash match do not, by themselves, establish the exact mechanism or precise timestamp of the file-copy operation.
+
+#### Next Step
+
+Correlate browser, command-line, and other user-activity artifacts with the established filesystem and removable-media timeline.

@@ -5,3 +5,6 @@ timestamp,event_type,source,artifact,description,evidence_id,confidence,notes202
 2026-09-06T22:54:03-04:00,file_modified,E003-Autopsy,C:\Users\labuser\Documents\project_archive.zip,ZIP archive metadata shows final modification one second after creation,E003,High,NTFS modified timestamp observed in Autopsy
 2026-09-07T13:05:35-04:00,file_deleted,E003-Autopsy,C:\Users\labuser\Documents\ProjectAtlas\meeting_notes.txt,Recycle Bin artifact records deletion from original ProjectAtlas path,E003,High,Parsed by Autopsy Recycle Bin Analyzer
 2026-09-07T13:14:07-04:00,file_deleted,E003-Autopsy,C:\Users\labuser\Documents\ProjectAtlas\quarterly_summary.txt,Recycle Bin artifact records deletion from original ProjectAtlas path,E003,High,Parsed by Autopsy Recycle Bin Analyzer
+@'
+2026-09-07T11:59:49-04:00,usb_device_attached,E003-Autopsy,GEMBIRD DM8261 Flashdisc,Removable storage device artifact identified on endpoint,E003,High,USB Device Attached artifact parsed by Autopsy
+'@ | Add-Content "case-01-windows-endpoint\timeline.csv"

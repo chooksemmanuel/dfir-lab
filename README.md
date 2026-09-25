@@ -393,3 +393,16 @@ Completed:
 - Continued separating evidence-derived findings from scenario ground truth.
 
 The investigation now has an evidence-supported chronological sequence of key filesystem activity.
+
+### Day 25
+
+Completed:
+
+- Reviewed E003 USB-device artifacts.
+- Identified removable-storage activity involving a GEMBIRD DM8261 Flashdisc.
+- Exported `project_archive.zip` independently from E003 and E001.
+- Verified both archive copies were 810 bytes.
+- Calculated SHA-256 hashes for both copies.
+- Confirmed that the E001 USB archive and E003 endpoint archive are byte-for-byte identical.
+
+This provides cross-source correlation between the endpoint and removable-media evidence.

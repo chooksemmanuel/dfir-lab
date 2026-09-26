@@ -406,3 +406,16 @@ Completed:
 - Confirmed that the E001 USB archive and E003 endpoint archive are byte-for-byte identical.
 
 This provides cross-source correlation between the endpoint and removable-media evidence.
+
+### Day 26
+
+Completed:
+
+- Reviewed Microsoft Edge browser history and search artifacts.
+- Identified research concerning PowerShell file compression and USB file copying.
+- Reviewed Recent Documents artifacts associated with scenario files.
+- Located scenario-period PowerShell command history.
+- Identified shell-history references to ProjectAtlas, Staging and project_archive.zip.
+- Reviewed Shell Bag evidence associated with ProjectAtlas.
+- Added evidence-supported browser events to the forensic timeline.
+- Kept behavioural correlation separate from conclusions about intent.

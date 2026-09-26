@@ -1168,3 +1168,85 @@ The USB-device artifact and hash match do not, by themselves, establish the exac
 #### Next Step
 
 Correlate browser, command-line, and other user-activity artifacts with the established filesystem and removable-media timeline.
+
+---
+
+### Day 26 - Browser and User-Activity Correlation
+
+#### Browser History
+
+Autopsy identified Microsoft Edge activity associated with the lab endpoint on September 5, 2026.
+
+Relevant records included:
+
+- `2026-09-05 11:57:22 EDT`
+  - Digital Forensics - Wikipedia
+
+- `2026-09-05 11:58:08 EDT`
+  - Bing search: `how to compress files using powershell`
+
+- `2026-09-05 11:58:57 EDT`
+  - Bing search relating to copying files to a USB drive
+
+Autopsy independently parsed the PowerShell-compression query as a Web Search artifact from the Edge History database.
+
+These records establish browser research activity before the later staging, archive creation, removable-media and deletion events.
+
+They are treated as evidence of browsing/search activity and not as independent proof of motive or intent.
+
+#### Recent Documents
+
+Recent Documents artifacts referenced several scenario-related items and locations, including:
+
+- `ProjectAtlas`
+- `client_contacts.csv`
+- `meeting_notes.txt`
+- `project_notes.txt`
+- `quarterly_summary.txt`
+
+Several records also preserved the earlier duplicate `.txt.txt` filenames produced during scenario execution.
+
+These artifacts provide additional evidence of user interaction with scenario files and directories.
+
+#### PowerShell History
+
+A scenario-period `ConsoleHost_history.txt` artifact was identified.
+
+Observed metadata included:
+
+- Created: `2026-09-04 14:52:39 EDT`
+- Modified: `2026-09-07 13:54:11 EDT`
+- Size: `5921 bytes`
+
+The history contained scenario-relevant commands and references involving:
+
+- `ProjectAtlas`
+- `Staging`
+- `project_archive.zip`
+- `Get-ChildItem`
+- `Get-Item`
+- `Rename-Item`
+- `Test-Path`
+- `Get-Date`
+
+The shell history therefore corroborates command-line interaction with objects previously identified through filesystem analysis.
+
+Individual command execution timestamps cannot be derived reliably from PSReadLine history alone and were therefore not added to the forensic timeline.
+
+#### Shell Bags
+
+Autopsy also identified a Shell Bag entry associated with `ProjectAtlas`.
+
+This provides secondary evidence that the directory was interacted with through Windows Explorer.
+
+#### Finding
+
+E003 contains multiple independent user-activity artifacts that correlate with the later filesystem evidence.
+
+Browser history shows research concerning file compression and USB file copying.
+
+PowerShell history contains commands involving the same project directory, staging area and archive subsequently recovered during the investigation.
+
+Recent Documents and Shell Bag artifacts provide further corroboration of interaction with scenario files and directories.
+
+These artifacts are used as behavioural and activity correlation and are not interpreted as proof of user motive.

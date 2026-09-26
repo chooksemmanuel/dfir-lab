@@ -8,3 +8,11 @@ timestamp,event_type,source,artifact,description,evidence_id,confidence,notes202
 @'
 2026-09-07T11:59:49-04:00,usb_device_attached,E003-Autopsy,GEMBIRD DM8261 Flashdisc,Removable storage device artifact identified on endpoint,E003,High,USB Device Attached artifact parsed by Autopsy
 '@ | Add-Content "case-01-windows-endpoint\timeline.csv"
+
+$Timeline = "case-01-windows-endpoint\timeline.csv"
+
+@'
+2026-09-05T11:57:22-04:00,web_activity,E003-Autopsy,https://en.wikipedia.org/wiki/Digital_Forensics,Microsoft Edge history records access to the Digital Forensics Wikipedia page,E003,High,Parsed from Edge browser history
+2026-09-05T11:58:08-04:00,web_search,E003-Autopsy,how to compress files using powershell,Bing search query recorded in Microsoft Edge,E003,High,Parsed by Autopsy Web Search artifact
+2026-09-05T11:58:57-04:00,web_search,E003-Autopsy,windows copy files to usb drive,Bing search activity recorded in Microsoft Edge history,E003,High,Parsed from Edge browser history
+'@ | Add-Content $Timeline

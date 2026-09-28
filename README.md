@@ -430,3 +430,13 @@ Performed initial Volatility 3 analysis of E002.
 - Checked available network-state artifacts
 - Distinguished acquisition-related activity from investigative findings
 - Retained the documented post-reboot limitation of E002
+
+### Day 28 - Reconstructing the Case
+
+Correlated the forensic findings from E001, E002 and E003 into the first evidence-based case reconstruction.
+
+- Built the investigation timeline from recovered artifacts
+- Correlated browser, filesystem, USB and deletion evidence
+- Used SHA-256 evidence to link the endpoint archive with the USB copy
+- Documented confidence and evidentiary limitations
+- Preserved discrepancies rather than forcing evidence to match the planned scenario

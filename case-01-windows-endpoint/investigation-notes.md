@@ -1282,3 +1282,30 @@ No conclusion of malicious process activity was made from this initial memory tr
 ### Limitation
 
 E002 represents a post-reboot live-memory acquisition of LAB-WIN11-01. It does not preserve the original volatile state that existed during the Day 05-Day 07 scenario activity.
+
+## Day 28 - Evidence Correlation and Timeline Reconstruction
+
+The investigation moved from individual artifact examination to evidence-based reconstruction.
+
+A formal findings document was created to correlate evidence from E001, E002 and E003.
+
+The previously empty `timeline.csv` was populated only after forensic examination had established supportable events.
+
+The reconstructed sequence currently supports:
+
+Web research
+-> selected ProjectAtlas files staged
+-> archive created
+-> removable media attached
+-> identical archive recovered from endpoint and USB evidence
+-> subsequent file deletion
+
+Important interpretive boundaries were retained:
+
+- browser searches were not treated as proof of intent;
+- an exact USB-copy timestamp was not invented;
+- identical SHA-256 hashes were used to establish byte-for-byte archive identity;
+- the `quarterly_summary.txt` deletion-method discrepancy was preserved;
+- E002 was treated only as post-reboot memory evidence.
+
+No conclusion of malicious intent was made.

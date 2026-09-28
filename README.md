@@ -419,3 +419,14 @@ Completed:
 - Reviewed Shell Bag evidence associated with ProjectAtlas.
 - Added evidence-supported browser events to the forensic timeline.
 - Kept behavioural correlation separate from conclusions about intent.
+
+### Day 27 - Memory Forensics
+
+Performed initial Volatility 3 analysis of E002.
+
+- Verified preserved and working-copy SHA-256 hashes
+- Successfully parsed the Windows memory image
+- Reviewed process listing, process tree and command lines
+- Checked available network-state artifacts
+- Distinguished acquisition-related activity from investigative findings
+- Retained the documented post-reboot limitation of E002

@@ -1250,3 +1250,35 @@ PowerShell history contains commands involving the same project directory, stagi
 Recent Documents and Shell Bag artifacts provide further corroboration of interaction with scenario files and directories.
 
 These artifacts are used as behavioural and activity correlation and are not interpreted as proof of user motive.
+
+## Day 27 - Volatile Memory Triage
+
+E002 was analysed using Volatility 3 Framework 2.28.2.
+
+Before analysis, the preserved memory image and working copy were independently hashed with SHA-256.
+
+- Original size: 5,368,709,120 bytes
+- Working-copy size: 5,368,709,120 bytes
+- SHA-256: `E4E36E18891706E3C933F8290155716914025DFA38EE5B738B4956E77C4B8C44`
+- Integrity verification: PASS
+
+`windows.info` successfully identified the Windows memory image and reported a system time of 2026-09-12 14:45:01 UTC.
+
+Initial triage was performed using:
+
+- `windows.pslist`
+- `windows.pstree`
+- `windows.cmdline`
+- `windows.netscan`
+
+Observed processes included normal Windows shell activity, VMware Tools processes, Windows Terminal, Explorer and PowerShell.
+
+PowerShell PID 5816 was present with a creation time of 2026-09-12 14:11:05 UTC. Its presence is consistent with the documented administrative/acquisition activity surrounding E002 and is not independently treated as suspicious.
+
+`windows.netscan` completed without returning socket or connection records. This is recorded as a plugin result only and is not interpreted as proof that the endpoint had no network activity.
+
+No conclusion of malicious process activity was made from this initial memory triage.
+
+### Limitation
+
+E002 represents a post-reboot live-memory acquisition of LAB-WIN11-01. It does not preserve the original volatile state that existed during the Day 05-Day 07 scenario activity.

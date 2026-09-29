@@ -440,3 +440,14 @@ Correlated the forensic findings from E001, E002 and E003 into the first evidenc
 - Used SHA-256 evidence to link the endpoint archive with the USB copy
 - Documented confidence and evidentiary limitations
 - Preserved discrepancies rather than forcing evidence to match the planned scenario
+
+### Day 29 - Building the Case Report
+
+Converted the investigation into a structured forensic report.
+
+- Consolidated acquisition, analysis and findings
+- Separated evidence from derived analysis material
+- Prepared the final evidence-figure index
+- Incorporated cross-source correlation and timeline findings
+- Retained documented limitations and investigative deviations
+- Introduced no new conclusions during reporting

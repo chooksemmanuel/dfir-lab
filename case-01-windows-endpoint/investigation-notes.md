@@ -1309,3 +1309,30 @@ Important interpretive boundaries were retained:
 - E002 was treated only as post-reboot memory evidence.
 
 No conclusion of malicious intent was made.
+
+## Day 29 - Report Construction and Evidence Presentation
+
+The investigation entered the formal reporting phase.
+
+A structured report draft was created covering:
+
+- executive summary
+- introduction
+- aim and objectives
+- laboratory environment
+- scenario
+- evidence inventory
+- acquisition and preservation
+- methodology
+- investigative findings
+- timeline reconstruction
+- cross-source correlation
+- limitations
+- conclusion
+- appendices
+
+A separate figure index was also created to distinguish forensic-evidence screenshots from project/process documentation.
+
+No new forensic conclusions were introduced during report construction.
+
+The report continues to preserve the evidentiary limitations and discrepancies documented during the investigation.

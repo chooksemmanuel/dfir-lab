@@ -2,7 +2,36 @@
 
 A controlled digital-forensics laboratory built to practise evidence acquisition, forensic analysis, timeline reconstruction, investigative reasoning, and forensic reporting.
 
-## Current Investigation
+## Case Navigation
+
+- [Case Brief](case-01-windows-endpoint/case-brief.md)
+- [Evidence Manifest](case-01-windows-endpoint/evidence-manifest.md)
+- [Investigation Notes](case-01-windows-endpoint/investigation-notes.md)
+- [Findings](case-01-windows-endpoint/findings.md)
+- [Timeline](case-01-windows-endpoint/timeline.csv)
+- [Case Closure](case-01-windows-endpoint/case-closure.md)
+- [Forensic Report](case-01-windows-endpoint/report/DFIR-CASE-001-report-draft.md)
+
+## Project Status
+
+✅ **Completed - DFIR-CASE-001 closed**
+
+This repository documents a 30-day Windows endpoint digital-forensics investigation covering:
+
+- laboratory design
+- controlled evidence generation
+- forensic acquisition
+- evidence integrity verification
+- removable-media analysis
+- Windows filesystem analysis
+- deleted-file examination
+- browser artifacts
+- memory forensics with Volatility 3
+- cross-source correlation
+- timeline reconstruction
+- forensic reporting
+
+Raw forensic evidence is intentionally excluded from this repository.
 
 ### Case 01: Windows Endpoint Forensics
 
@@ -451,3 +480,37 @@ Converted the investigation into a structured forensic report.
 - Incorporated cross-source correlation and timeline findings
 - Retained documented limitations and investigative deviations
 - Introduced no new conclusions during reporting
+
+## Project Status
+
+✅ **Completed - DFIR-CASE-001 closed**
+
+This repository documents a 30-day Windows endpoint digital-forensics investigation covering:
+
+- laboratory design
+- controlled evidence generation
+- forensic acquisition
+- evidence integrity verification
+- removable-media analysis
+- Windows filesystem analysis
+- deleted-file examination
+- browser artifacts
+- memory forensics with Volatility 3
+- cross-source correlation
+- timeline reconstruction
+- forensic reporting
+
+Raw forensic evidence is intentionally excluded from this repository.
+
+### Day 30 - Closing DFIR-CASE-001
+
+Completed the investigation and entered formal case closure.
+
+- Performed final evidence and repository QA
+- Revalidated the reconstructed timeline
+- Confirmed cross-source archive integrity
+- Finalized findings and limitations
+- Created formal case-closure documentation
+- Prepared the investigation for final portfolio reporting
+
+**DFIR-CASE-001: CLOSED**

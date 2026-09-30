@@ -1,33 +1,13 @@
-timestamp,event_type,source,artifact,description,evidence_id,confidence,notes2026-09-06T22:42:24-04:00,file_created,E003-Autopsy,C:\Users\labuser\Documents\Staging\client_contacts.csv,Allocated copy created in Staging,E003,High,Creation timestamp observed in NTFS metadata
-2026-09-06T22:43:07-04:00,file_created,E003-Autopsy,C:\Users\labuser\Documents\Staging\quarterly_summary.txt,Allocated copy created in Staging,E003,High,Creation timestamp observed in NTFS metadata
-2026-09-06T22:43:28-04:00,file_created,E003-Autopsy,C:\Users\labuser\Documents\Staging\project_notes.txt,Allocated copy created in Staging,E003,High,Creation timestamp observed in NTFS metadata
-2026-09-06T22:54:02-04:00,archive_created,E003-Autopsy,C:\Users\labuser\Documents\project_archive.zip,ZIP archive created containing three project files,E003,High,Archive creation timestamp and contents observed in Autopsy
-2026-09-06T22:54:03-04:00,file_modified,E003-Autopsy,C:\Users\labuser\Documents\project_archive.zip,ZIP archive metadata shows final modification one second after creation,E003,High,NTFS modified timestamp observed in Autopsy
-2026-09-07T13:05:35-04:00,file_deleted,E003-Autopsy,C:\Users\labuser\Documents\ProjectAtlas\meeting_notes.txt,Recycle Bin artifact records deletion from original ProjectAtlas path,E003,High,Parsed by Autopsy Recycle Bin Analyzer
-2026-09-07T13:14:07-04:00,file_deleted,E003-Autopsy,C:\Users\labuser\Documents\ProjectAtlas\quarterly_summary.txt,Recycle Bin artifact records deletion from original ProjectAtlas path,E003,High,Parsed by Autopsy Recycle Bin Analyzer
-@'
-2026-09-07T11:59:49-04:00,usb_device_attached,E003-Autopsy,GEMBIRD DM8261 Flashdisc,Removable storage device artifact identified on endpoint,E003,High,USB Device Attached artifact parsed by Autopsy
-'@ | Add-Content "case-01-windows-endpoint\timeline.csv"
-
-$Timeline = "case-01-windows-endpoint\timeline.csv"
-
-@'
-2026-09-05T11:57:22-04:00,web_activity,E003-Autopsy,https://en.wikipedia.org/wiki/Digital_Forensics,Microsoft Edge history records access to the Digital Forensics Wikipedia page,E003,High,Parsed from Edge browser history
-2026-09-05T11:58:08-04:00,web_search,E003-Autopsy,how to compress files using powershell,Bing search query recorded in Microsoft Edge,E003,High,Parsed by Autopsy Web Search artifact
-2026-09-05T11:58:57-04:00,web_search,E003-Autopsy,windows copy files to usb drive,Bing search activity recorded in Microsoft Edge history,E003,High,Parsed from Edge browser history
-'@ | Add-Content $Timeline
-
-
-timestamp,event_type,source,artifact,description,evidence_id,confidence,notes
-2026-09-05T11:55:07-04:00,web_activity,Autopsy Web History,example.com,Visited example.com,E003,High,Recovered Microsoft Edge history
-2026-09-05T11:57:22-04:00,web_activity,Autopsy Web History,Digital Forensics Wikipedia,Visited Wikipedia Digital Forensics page,E003,High,Recovered Microsoft Edge history
-2026-09-05T11:58:08-04:00,web_search,Autopsy Web Search,how to compress files using powershell,Search activity recovered from Microsoft Edge,E003,High,Search alone does not establish intent
-2026-09-05T11:58:57-04:00,web_search,Autopsy Web History,windows copy files to usb drive,Search activity recovered from Microsoft Edge,E003,High,Search alone does not establish intent
-2026-09-06T22:42:24-04:00,file_staging,Autopsy File Metadata,client_contacts.csv,Staged copy created in Documents\Staging,E003,High,Original modification time retained
-2026-09-06T22:43:07-04:00,file_staging,Autopsy File Metadata,quarterly_summary.txt,Staged copy created in Documents\Staging,E003,High,Original modification time retained
-2026-09-06T22:43:28-04:00,file_staging,Autopsy File Metadata,project_notes.txt,Staged copy created in Documents\Staging,E003,High,Original modification time retained
-2026-09-06T22:54:02-04:00,archive_creation,Autopsy File Metadata,project_archive.zip,ZIP archive created under labuser Documents,E003,High,Archive contains three staged files
-2026-09-07T11:59:49-04:00,usb_activity,Autopsy USB Device Attached,GEMBIRD DM8261 Flashdisc,Removable USB device observed by Windows artifacts,E003,High,Device artifact recovered from endpoint
-2026-09-07T12:24:15-04:00,file_access,Autopsy File Metadata,project_archive.zip,Archive access recorded on endpoint,E003,High,Same 810-byte archive later recovered from E001
-2026-09-07T13:05:35-04:00,file_deletion,Autopsy Recycle Bin Analyzer,meeting_notes.txt,Deletion metadata recovered for ProjectAtlas meeting_notes.txt,E003,High,Also observed as unallocated in ProjectAtlas
-2026-09-07T13:14:07-04:00,file_deletion,Autopsy Recycle Bin Analyzer,quarterly_summary.txt,Deletion metadata recovered for ProjectAtlas quarterly_summary.txt,E003,High,Deletion method retained as a documented discrepancy
+"timestamp","event_type","source","artifact","description","evidence_id","confidence","notes"
+"2026-09-05T11:55:07-04:00","web_activity","Autopsy Web History","example.com","Visited example.com","E003","High","Recovered Microsoft Edge history"
+"2026-09-05T11:57:22-04:00","web_activity","Autopsy Web History","Digital Forensics Wikipedia","Visited Wikipedia Digital Forensics page","E003","High","Recovered Microsoft Edge history"
+"2026-09-05T11:58:08-04:00","web_search","Autopsy Web Search","how to compress files using powershell","Search activity recovered from Microsoft Edge","E003","High","Search alone does not establish intent"
+"2026-09-05T11:58:57-04:00","web_search","Autopsy Web History","windows copy files to usb drive","Search activity recovered from Microsoft Edge","E003","High","Search alone does not establish intent"
+"2026-09-06T22:42:24-04:00","file_staging","Autopsy File Metadata","client_contacts.csv","Staged copy created in Documents\Staging","E003","High","Original modification time retained"
+"2026-09-06T22:43:07-04:00","file_staging","Autopsy File Metadata","quarterly_summary.txt","Staged copy created in Documents\Staging","E003","High","Original modification time retained"
+"2026-09-06T22:43:28-04:00","file_staging","Autopsy File Metadata","project_notes.txt","Staged copy created in Documents\Staging","E003","High","Original modification time retained"
+"2026-09-06T22:54:02-04:00","archive_creation","Autopsy File Metadata","project_archive.zip","ZIP archive created under labuser Documents","E003","High","Archive contains three staged files"
+"2026-09-07T11:59:49-04:00","usb_activity","Autopsy USB Device Attached","GEMBIRD DM8261 Flashdisc","Removable USB device observed by Windows artifacts","E003","High","Device artifact recovered from endpoint"
+"2026-09-07T12:24:15-04:00","file_access","Autopsy File Metadata","project_archive.zip","Archive access recorded on endpoint","E003","High","Same 810-byte archive later recovered from E001"
+"2026-09-07T13:05:35-04:00","file_deletion","Autopsy Recycle Bin Analyzer","meeting_notes.txt","Deletion metadata recovered for ProjectAtlas meeting_notes.txt","E003","High","Also observed as unallocated in ProjectAtlas"
+"2026-09-07T13:14:07-04:00","file_deletion","Autopsy Recycle Bin Analyzer","quarterly_summary.txt","Deletion metadata recovered for ProjectAtlas quarterly_summary.txt","E003","High","Deletion method retained as documented discrepancy"
